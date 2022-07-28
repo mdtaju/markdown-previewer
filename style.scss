@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Russo+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+// Variables
+$pinkBackground: #ffcff1;
+$hotPink: #fba0e3;
+$editorBackground: #c0d8d8;
+$backgroundBase: #619e9e;
+
+$shadow: 1px 1px 10px 2px darken($backgroundBase, 20%);
+
+.main_container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $pinkBackground;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+.editor_container {
+  margin-bottom: 30px;
+}
+._container {
+  border: 1px solid black;
+  box-shadow: $shadow;
+}
+._header {
+  padding: 10px;
+  background-color: $hotPink;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header_title_area {
+    display: flex;
+    align-items: center;
+    p {
+      margin-left: 10px;
+      font-family: "Russo One", sans-serif;
+    }
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}
+.header_toggle {
+  cursor: pointer;
+  &:hover {
+    color: rgb(6, 185, 6);
+  }
+}
+.editor_container {
+  width: 50vw;
+}
+.editor_area {
+  background-color: $editorBackground;
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 10px 5px;
+    font-size: 1rem;
+    background-color: $editorBackground;
+    resize: vertical;
+  }
+}
+.previewer_container {
+  width: 60vw;
+}
+.previewer_area {
+  background-color: $editorBackground;
+  padding: 20px 15px;
+  overflow-x: scroll;
+}
+
+@media only screen and (max-width: 600px) {
+  .editor_container {
+    width: 100%;
+  }
+  .previewer_container {
+    width: 100%;
+  }
+}
+// Toggle
+.previewer_min_icon,
+.editor_min_icon {
+  display: none;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.toggle_container_height {
+  min-height: 100vh;
+}
+.toggle_area_height {
+  min-height: 100vh;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Russo One", sans-serif;
+}

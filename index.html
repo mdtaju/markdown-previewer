@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown Previewer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main Container -->
+    <section class="main_container">
+      <!-- Editor Start Here -->
+      <div class="editor_container _container">
+        <div class="_header">
+          <div class="header_title_area">
+            <i class="fa-brands fa-free-code-camp"></i>
+            <p>Editor</p>
+          </div>
+          <div id="editor-toggle" class="header_toggle">
+            <i
+              class="fa-solid fa-down-left-and-up-right-to-center editor_min_icon"
+            ></i>
+            <i class="fa-solid fa-maximize editor_max_icon"></i>
+          </div>
+        </div>
+        <div class="editor_area">
+          <textarea name="" id="editor" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <!-- Previewer Start Here -->
+      <div class="previewer_container _container">
+        <div class="_header">
+          <div class="header_title_area">
+            <i class="fa-brands fa-free-code-camp"></i>
+            <p>Previewer</p>
+          </div>
+          <div id="previewer-toggle" class="header_toggle">
+            <i class="fa-solid fa-maximize previewer_max_icon"></i>
+            <i
+              class="fa-solid fa-down-left-and-up-right-to-center previewer_min_icon"
+            ></i>
+          </div>
+        </div>
+        <div id="preview" class="previewer_area"></div>
+      </div>
+      <p class="footer">Develop by Md. Tajuuddin Tarek</p>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
